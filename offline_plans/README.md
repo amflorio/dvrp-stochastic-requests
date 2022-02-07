@@ -8,7 +8,7 @@ The format of each myopic plan file is `V-<Lambda>.myo.op`, where:
 
 The format of each potential-based plan file is `V-<Lambda>-<dist>-<K>.pb.op`, where, in addition to `Lambda`:
 
-`dist` in {UTI, CTI, CTD} is the distribution of dynamic requests,and\
+`dist` in {UTI, CTI, CTD} is the distribution of dynamic requests, and\
 `K` is the (maximum) number of vehicles.
 
 Note: the offline plan files are not intended to be edited manually. They are generated, imported and exported automatically by the app.
