@@ -10,7 +10,7 @@ The format of each file is `V-<Lambda>-<dist>.<n>.req`, where:
 
 Please refer to the paper for more details about the parameters.
 
-Each trajectory file consists of a sequence of triples `(u, i, d)`, where:
+Each trajectory file consists of a sequence of triples `(u,i,d)`, where:
 
 `u` is the request arrival time (`u=0` for static or planned requests, `u>0` for dynamic requests),\
 `i` is the request node, and\
