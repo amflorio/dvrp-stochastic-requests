@@ -262,7 +262,7 @@ pair<double, double> Instance::getXYCoords(double lat, double lon) const {
 }
 
 void Instance::loadRealWorld() {
-    string filename="in/coords/"+network+".xy";
+    string filename="../in/coords/"+network+".xy";
     ifstream fcoords(filename);
     if (!fcoords.is_open()) {
         cout<<"loadRealWorld(): unable to open file "<<filename<<endl;
@@ -284,7 +284,7 @@ void Instance::loadRealWorld() {
             exit(-1);
         }
     }
-    filename="in/dists/"+network+".d";
+    filename="../in/dists/"+network+".d";
     ifstream fdists(filename);
     if (!fdists.is_open()) {
         cout<<"loadRealWorld(): unable to open file "<<filename<<endl;
