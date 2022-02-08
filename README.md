@@ -5,7 +5,7 @@ The Dynamic Vehicle Routing Problem with Stochastic Requests (DVRPSR) is a proto
 
 This repository contains the source code and datasets to allow the replication of the results from the paper:
 
-**Zhang, J., Luo, K., Florio, A.M., & Van Woensel, T. (2022). Solving Large-Scale Dynamic Vehicle Routing Problems with Stochastic Requests.**
+[1] **Zhang, J., Luo, K., Florio, A.M., & Van Woensel, T. (2022). Solving Large-Scale Dynamic Vehicle Routing Problems with Stochastic Requests.**
 
 For a glimpse of the DVRPSR and some of the scheduling policies implemented, watch our project's visual abstract: [https://youtu.be/D57xNfU73as](https://youtu.be/D57xNfU73as)
 
@@ -28,3 +28,4 @@ The implementation requires:
 ## Usage
 
 ## Documentation
+The implementation is modular and follows closely the methodology proposed in [1].
