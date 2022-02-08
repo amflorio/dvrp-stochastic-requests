@@ -11,10 +11,10 @@ For a glimpse of the DVRPSR and some of the scheduling policies implemented, wat
 
 More specifically, the code implements the following **scheduling policies** for the DVRPSR:
 * **Greedy policy**: accepts dynamic requests in a greedy fashion, and update planned routes either by cheapest insertion or by complete reoptimization.
-* **PFA policy**: scheduling policy based on policy function approximation.accepts dynamic requests as long as the immediate reward offsets the estimated decrease in the reward-to-go, which is estimated by policy function approximation.
+* **PFA policy**: scheduling policy based on policy function approximation.
 * **Rollout policy**: applies the rollout algorithm with either the Greedy or the PFA policy as the base policy.
 * **Potential-based policy**: accepts dynamic requests as long as the immediate reward offsets the estimated decrease in the reward-to-go, which is computed by solving a multiple-knapsack model.
-* **Simplified potential-based policy**: as the potential-based policy, but the reward-to-go is approximated by single-knapsack models.
+* **Simplified potential-based policy**: similar to the potential-based policy, but the reward-to-go is approximated by single-knapsack models.
 
 In addition, code for the following **offline planners** is also provided:
 * **Myopic planner**: an offline route planner that solves approximately a duration-constrained VRP by a column generation-based heuristic.
@@ -23,7 +23,7 @@ In addition, code for the following **offline planners** is also provided:
 ## Dependencies
 The implementation requires:
 * The [boost](https://www.boost.org) C++ libraries, which are installed by default in most Linux environments.
-* The [CPLEX Optimization Studio](https://www.ibm.com/ca-en/products/ilog-cplex-optimization-studio), which is free for academic use. CPLEX is used **(i)** for solving the multiple-knapsack models, **(ii)** within the column generation procedure for generating offline route plans, and **(iii)** within a Traveling Salesman Problem algorithm for reoptimizing planned routes.
+* The [CPLEX Optimization Studio](https://www.ibm.com/ca-en/products/ilog-cplex-optimization-studio), which is free for academic use. CPLEX is used **(i)** for solving the multiple-knapsack models, **(ii)** within the column generation procedure for generating offline route plans, and **(iii)** within a branch-and-cut Traveling Salesman Problem algorithm for reoptimizing planned routes.
 
 ## Usage
 
