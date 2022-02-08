@@ -30,23 +30,27 @@ The implementation requires:
 ## Documentation
 The implementation is modular and follows closely the methodology proposed in [1]. Below, we provide a brief description of the contents of each module:
 
-`BasePolicy.h`:
+### Duration-constrained VRP Modules (Offline Planners)
 
-`DVRPData.h`:
+`DVRPData.h`: Stores information about an instance of the duration-constrained VRP, and provides helper functions.
 
-`DVRPLabel.h`:
+`DVRPLabel.h`: Represents a label within the pricing algorithm within the column generation procedure, which is used to compute the exact linear bound of the duration-constrained VRP. Provides associated functions for extending labels, verifying dominance rules, etc.
 
-`DVRPLinearSolution.h`:
+`DVRPLinearSolution.h`: Represents a fractional solution to the duration-constrained VRP.
 
-`DVRPLinearSolver.h`:
+`DVRPLinearSolver.h`: Implements column generation (except the pricing algorithm) and interfaces with the linear programming solver (CPLEX).
 
-`DVRPPricing.h`:
+`DVRPPricing.h`: Implements the pricing (labeling) algorithm for identifying routes with negative reduced costs.
 
-`DVRPRoute.h`:
+`DVRPRoute.h`: Represents a route of the duration-constrained VRP and provides associated functions.
 
-`DVRPSolution.h`:
+`DVRPSolution.h`: Represents a solution to the duration-constrained VRP (i.e., a set of routes).
 
-`DVRPSolver.h`:
+`DVRPSolver.h`: Implements the petal heuristic to choose the best route combination among all routes created by column generation.
+
+### Online Scheduling Policies (Online Policies)
+
+`BasePolicy.h`: Abstract class (or *interface*) to be implemented by policies that are used as *base policies* within the rollout scheduling policy.
 
 `Data.h`:
 
