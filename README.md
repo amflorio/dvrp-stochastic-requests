@@ -50,7 +50,7 @@ The implementation is modular and follows closely the methodology proposed in [1
 
 ### Online Scheduling Policies (Online Policies)
 
-`BasePolicy.h`: Abstract class (or *interface*) to be implemented by policies that are used as *base policies* within the rollout scheduling policy.
+`BasePolicy.h`: Abstract class (or *interface*) to be implemented by policies that are employed as *base policies* within the rollout scheduling policy.
 
 `Data.h`:
 
