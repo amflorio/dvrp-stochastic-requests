@@ -40,75 +40,75 @@ The implementation is modular and follows closely the methodology proposed in [1
 
 `DVRPLinearSolver.h`: Implements column generation (except the pricing algorithm) and interfaces with the linear programming solver (CPLEX).
 
-`DVRPPricing.h`: Implements the pricing (labeling) algorithm for identifying routes with negative reduced costs.
+`DVRPPricing.h`: Pricing algorithm (labeling algorithm) for identifying routes with negative reduced costs.
 
 `DVRPRoute.h`: Represents a route of the duration-constrained VRP and provides associated functions.
 
 `DVRPSolution.h`: Represents a solution to the duration-constrained VRP (i.e., a set of routes).
 
-`DVRPSolver.h`: Implements the petal heuristic to choose the best route combination among all routes created by column generation.
+`DVRPSolver.h`: Petal heuristic to choose the best route combination among all routes created by column generation.
 
 ### Online Scheduling Policies (Online Policies)
 
 `BasePolicy.h`: Abstract class (or *interface*) to be implemented by policies that are employed as *base policies* within the rollout scheduling policy.
 
-`Data.h`:
+`Data.h`: Interface with the instance object.
 
-`Decision.h`:
+`Decision.h`: Represents a decision and its \`accept\', \`assign\' and \`routing\' components.
 
-`Dijkstra.h`:
+`Dijkstra.h`: Shortest-path algorithms.
 
-`GreedyPolicy.h`:
+`GreedyPolicy.h`: Greedy scheduling policy, which always accept requests if it is feasible to do so.
 
-`Instance.h`:
+`Instance.h`: Stores instance information. Provides functions for generating sample paths following the instance's spatiotemporal distribution of requests. These functions are used by the implemented scheduling policies and can be used in the implementation of new lookahead policies.
 
-`Link.h`:
+`Link.h`: Represents a road segment of the street network.
 
-`MPotentialPlanner.h`:
+`MPotentialPlanner.h`: Potential-based offline planner based on the multiple-knapsack potential approximation. Currently, this algorithm takes very long to converge. The offline planner based on simple-knapsack approximations `PotentialPlanner.h` is preferred for generating potential-based plans.
 
-`MaxFlowSolution.h`:
+`MaxFlowSolution.h`: Stores a solution to the maximum-flow problem.
 
-`MaxFlowSolver.h`:
+`MaxFlowSolver.h`: Augmenting-path algorithm for solving the single source, single destination maximum-flow problem.
 
-`MinCutSolution.h`:
+`MinCutSolution.h`: Stores a solution to the global minimum-cut problem.
 
-`MinCutSolver.h`:
+`MinCutSolver.h`: Algorithm for finding the global minimum cut in a flow network.
 
-`MyopicPlanner.h`:
+`MyopicPlanner.h`: Myopic offline planner.
 
-`OfflinePlan.h`:
+`OfflinePlan.h`: Represents an offline plan: set of planned routes to serve static (or scheduled) requests.
 
-`OfflinePlanner.h`:
+`OfflinePlanner.h`: Abstract class (or *interface*) to be implemented by offline planners.
 
-`OnlinePolicy.h`:
+`OnlinePolicy.h`: Abstract class (or *interface*) to be implemented by scheduling policies.
 
-`PFAPolicy.h`:
+`PFAPolicy.h`: Policy function approximation-based scheduling policy.
 
-`PGreedyPolicy.h`:
+`PGreedyPolicy.h`: Simplified potential-based policy (S-PbP): potential approximation via simple knapsack models.
 
-`Path.h`:
+`Path.h`: Represents a path on the street network.
 
-`PathTree.h`:
+`PathTree.h`: Represents a tree -- used mostly for storing shortest-path trees.
 
-`PlannedRoute.h`:
+`PlannedRoute.h`: Represents a planned route.
 
-`PolicySimulator.h`:
+`PolicySimulator.h`: DVRPSR simulator that can be used with arbitrary scheduling policies.
 
 `PotentialPlanner.h`:
 
-`Request.h`:
+`Request.h`: Represents a customer request (arrival time, node and duration).
 
-`RolloutPolicy.h`:
+`RolloutPolicy.h`: Rollout scheduling policy that can be used with arbitrary base policies.
 
-`RouteReoptimizer.h`:
+`RouteReoptimizer.h`: Reoptimizes the requests served along a planned route by solving an open Traveling Salesman Problem.
 
-`SimResults.h`:
+`SimResults.h`: Stores the results of the simulation.
 
-`State.h`:
+`State.h`: Represents a state of the dynamic system, including all vehicle states and the current request.
 
-`Stopwatch.h`:
+`Stopwatch.h`: Implements a simple stopwatch. Credits to [Kyle Kloepper](https://isocpp.org/wiki/faq/wg21#kyle-kloepper).
 
-`TikZExporter.h`:
+`TikZExporter.h`: Collection of functions to export a state of the dynamic system to LaTeX/TikZ graphics.
 
-`mPGreedyPolicy.h`:
+`mPGreedyPolicy.h`: Potential-based policy (PbP): potential approximation by multiple-knapsack models.
 
