@@ -96,19 +96,19 @@ The implementation is modular and follows closely the methodology proposed in [1
 `RouteReoptimizer.h`: Reoptimizes the requests served along a planned route by solving an open TSP.
 
 ### Other Modules
-`Data.h`: Interface with the instance object that represents an instance of the DVRPSR.
+> `Data.h`: Interface with the instance object that represents an instance of the DVRPSR.
 
-`Dijkstra.h`: Shortest-path algorithms.
+> `Dijkstra.h`: Shortest-path algorithms.
 
-`Instance.h`: Stores instance information. Provides functions for generating sample paths following the instance's spatiotemporal distribution of requests. These functions are used by the implemented scheduling policies and can be used in the implementation of new lookahead policies.
+> `Instance.h`: Stores instance information. Provides functions for generating sample paths following the instance's spatiotemporal distribution of requests. These functions are used by the implemented scheduling policies and can be used in the implementation of new lookahead policies.
 
-`Link.h`: Represents a road segment of the street network.
+> `Link.h`: Represents a road segment of the street network.
 
-`Path.h`: Represents a path on the street network.
+> `Path.h`: Represents a path on the street network.
 
-`PathTree.h`: Represents a tree -- used mostly for storing shortest-path trees.
+> `PathTree.h`: Represents a tree -- used mostly for storing shortest-path trees.
 
-`Stopwatch.h`: Implements a simple stopwatch. Credits to [Kyle Kloepper](https://isocpp.org/wiki/faq/wg21#kyle-kloepper).
+> `Stopwatch.h`: Implements a simple stopwatch. Credits to [Kyle Kloepper](https://isocpp.org/wiki/faq/wg21#kyle-kloepper).
 
-`TikZExporter.h`: Collection of functions to export a state of the dynamic system to LaTeX/TikZ graphics.
+> `TikZExporter.h`: Collection of functions to export a state of the dynamic system to LaTeX/TikZ graphics.
 
