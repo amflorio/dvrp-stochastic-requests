@@ -29,7 +29,7 @@ The implementation requires:
 * The [boost](https://www.boost.org) C++ libraries, which are installed by default in most Linux environments.
 * The [CPLEX Optimization Studio](https://www.ibm.com/ca-en/products/ilog-cplex-optimization-studio), which is free for academic use. CPLEX is used **(i)** for solving the multiple-knapsack models, **(ii)** within the column generation procedure for generating offline route plans, and **(iii)** within a branch-and-cut Traveling Salesman Problem (TSP) algorithm for reoptimizing planned routes.
 
-## Building and Running the DVRPSR Simulator
+## Building and Running
 
 ## Documentation
 The implementation is modular and follows closely the methodology proposed in [1]. Below, we provide a brief description of the contents of each module:
