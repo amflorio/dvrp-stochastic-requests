@@ -31,7 +31,6 @@ The implementation requires:
 The implementation is modular and follows closely the methodology proposed in [1]. Below, we provide a brief description of the contents of each module:
 
 ### Duration-constrained VRP Modules and Offline Planners
----
 `DVRPData.h`: Stores information about an instance of the duration-constrained VRP, and provides helper functions.
 
 `DVRPLabel.h`: Represents a label within the pricing algorithm of the column generation procedure, which is used to compute the exact linear bound of the duration-constrained VRP. Provides associated functions for extending labels, verifying dominance rules, etc.
@@ -57,9 +56,9 @@ The implementation is modular and follows closely the methodology proposed in [1
 `OfflinePlanner.h`: Abstract class (or *interface*) to be implemented by offline planners.
 
 `PotentialPlanner.h`: Potential-based offline planner based on the single-knapsack potential approximation. **Currently the best performing offline planner.**
+---
 
 ### DVRPSR Simulator and Online Scheduling Policies
----
 `BasePolicy.h`: Abstract class (or *interface*) to be implemented by policies that are employed as *base policies* within the rollout scheduling policy.
 
 `Decision.h`: Represents a decision and its \`accept\', \`assign\' and \`routing\' components.
@@ -85,9 +84,9 @@ The implementation is modular and follows closely the methodology proposed in [1
 `State.h`: Represents a state of the dynamic system, including all vehicle states and the current request.
 
 `mPGreedyPolicy.h`: Potential-based policy (PbP): potential approximation by multiple-knapsack models. **Currently the best-performing online policy.**
+---
 
 ### Reoptimization Models (Branch-and-Cut TSP Algorithm)
----
 `MaxFlowSolution.h`: Stores a solution to the maximum-flow problem.
 
 `MaxFlowSolver.h`: Augmenting-path algorithm for solving the single source, single destination maximum-flow problem.
@@ -97,9 +96,9 @@ The implementation is modular and follows closely the methodology proposed in [1
 `MinCutSolver.h`: Algorithm for finding the global minimum cut in a flow network.
 
 `RouteReoptimizer.h`: Reoptimizes the requests served along a planned route by solving an open TSP.
+---
 
 ### Other Modules
----
 `Data.h`: Interface with the instance object that represents an instance of the DVRPSR.
 
 `Dijkstra.h`: Shortest-path algorithms.
@@ -115,4 +114,5 @@ The implementation is modular and follows closely the methodology proposed in [1
 `Stopwatch.h`: Implements a simple stopwatch. Credits to [Kyle Kloepper](https://isocpp.org/wiki/faq/wg21#kyle-kloepper).
 
 `TikZExporter.h`: Collection of functions to export a state of the dynamic system to LaTeX/TikZ graphics.
+---
 
