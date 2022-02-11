@@ -7,13 +7,13 @@ This repository contains the source code and datasets to allow the replication o
 
 [1] **Zhang, J., Luo, K., Florio, A.M., & Van Woensel, T. (2022). Solving Large-Scale Dynamic Vehicle Routing Problems with Stochastic Requests.**
 
-For a glimpse of the DVRPSR and some of the scheduling policies implemented, watch our project's visual abstract: [https://youtu.be/D57xNfU73as](https://youtu.be/D57xNfU73as)
+A presentation summarizing the methodology proposed is available [here](DVRPSR-Presentation.pdf).
+
+For a glimpse of the DVRPSR and some of the scheduling policies implemented, watch our project's visual abstract at [https://youtu.be/D57xNfU73as](https://youtu.be/D57xNfU73as).
 
 ![DVRPSR Snapshot](snapshot.png?raw=true|width=100)
 
-A presentation summarizing the methodology proposed is available [here](DVRPSR-Presentation.pdf).
-
-More specifically, the code implements the following **scheduling policies** for the DVRPSR:
+The code implements the following **scheduling policies** for the DVRPSR:
 * **Greedy policy**: Accepts dynamic requests in a greedy fashion, and update planned routes either by cheapest insertion or by complete reoptimization.
 * **PFA policy**: Scheduling policy based on policy function approximation.
 * **Rollout policy**: Applies the rollout algorithm with either the Greedy or the PFA policy as the base policy.
