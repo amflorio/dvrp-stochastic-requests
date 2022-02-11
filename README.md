@@ -13,12 +13,12 @@ More specifically, the code implements the following **scheduling policies** for
 * **Greedy policy**: Accepts dynamic requests in a greedy fashion, and update planned routes either by cheapest insertion or by complete reoptimization.
 * **PFA policy**: Scheduling policy based on policy function approximation.
 * **Rollout policy**: Applies the rollout algorithm with either the Greedy or the PFA policy as the base policy.
-* **Potential-based policy**: Accepts dynamic requests as long as the immediate reward offsets the estimated decrease in the reward-to-go, which is computed by solving multiple-knapsack models.
+* **Potential-based policy**: Accepts dynamic requests as long as the immediate reward offsets the estimated decrease in the reward-to-go, which is computed by solving multiple-knapsack models. **Currently the best-performing online policy for the DVRPSR.**
 * **Simplified potential-based policy**: Similar to the potential-based policy, but the reward-to-go is approximated by single-knapsack models.
 
 In addition, code for the following **offline planners** is also provided:
 * **Myopic planner**: Offline route planner that solves approximately a duration-constrained VRP by a column generation-based heuristic.
-* **Potential-based planner**: Offline route planner that evaluates the expected reward-to-go of planned routes by single-knapsack models.
+* **Potential-based planner**: Offline route planner that evaluates the expected reward-to-go of planned routes by single-knapsack models. **Currently the best performing offline planner for the DVRPSR.**
 
 ## Dependencies
 The implementation requires:
@@ -30,7 +30,9 @@ The implementation requires:
 ## Documentation
 The implementation is modular and follows closely the methodology proposed in [1]. Below, we provide a brief description of the contents of each module:
 
-### Duration-constrained VRP Modules and Offline Planners
+---
+
+### Duration-constrained VRP Modules and Offline Planners:
 `DVRPData.h`: Stores information about an instance of the duration-constrained VRP, and provides helper functions.
 
 `DVRPLabel.h`: Represents a label within the pricing algorithm of the column generation procedure, which is used to compute the exact linear bound of the duration-constrained VRP. Provides associated functions for extending labels, verifying dominance rules, etc.
@@ -55,11 +57,11 @@ The implementation is modular and follows closely the methodology proposed in [1
 
 `OfflinePlanner.h`: Abstract class (or *interface*) to be implemented by offline planners.
 
-`PotentialPlanner.h`: Potential-based offline planner based on the single-knapsack potential approximation. **Currently the best performing offline planner.**
+`PotentialPlanner.h`: Potential-based offline planner based on the single-knapsack potential approximation. **Currently the best performing offline planner for the DVRPSR.**
 
 ---
 
-### DVRPSR Simulator and Online Scheduling Policies
+### DVRPSR Simulator and Online Scheduling Policies:
 `BasePolicy.h`: Abstract class (or *interface*) to be implemented by policies that are employed as *base policies* within the rollout scheduling policy.
 
 `Decision.h`: Represents a decision and its \`accept\', \`assign\' and \`routing\' components.
@@ -84,11 +86,11 @@ The implementation is modular and follows closely the methodology proposed in [1
 
 `State.h`: Represents a state of the dynamic system, including all vehicle states and the current request.
 
-`mPGreedyPolicy.h`: Potential-based policy (PbP): potential approximation by multiple-knapsack models. **Currently the best-performing online policy.**
+`mPGreedyPolicy.h`: Potential-based policy (PbP): potential approximation by multiple-knapsack models. **Currently the best-performing online policy for the DVRPSR.**
 
 ---
 
-### Reoptimization Models (Branch-and-Cut TSP Algorithm)
+### Reoptimization Models (Branch-and-Cut TSP Algorithm):
 `MaxFlowSolution.h`: Stores a solution to the maximum-flow problem.
 
 `MaxFlowSolver.h`: Augmenting-path algorithm for solving the single source, single destination maximum-flow problem.
@@ -101,7 +103,7 @@ The implementation is modular and follows closely the methodology proposed in [1
 
 ---
 
-### Other Modules
+### Other Modules:
 `Data.h`: Interface with the instance object that represents an instance of the DVRPSR.
 
 `Dijkstra.h`: Shortest-path algorithms.
