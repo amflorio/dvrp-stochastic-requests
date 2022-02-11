@@ -10,15 +10,15 @@ This repository contains the source code and datasets to allow the replication o
 For a glimpse of the DVRPSR and some of the scheduling policies implemented, watch our project's visual abstract: [https://youtu.be/D57xNfU73as](https://youtu.be/D57xNfU73as)
 
 More specifically, the code implements the following **scheduling policies** for the DVRPSR:
-* **Greedy policy**: accepts dynamic requests in a greedy fashion, and update planned routes either by cheapest insertion or by complete reoptimization.
-* **PFA policy**: scheduling policy based on policy function approximation.
-* **Rollout policy**: applies the rollout algorithm with either the Greedy or the PFA policy as the base policy.
-* **Potential-based policy**: accepts dynamic requests as long as the immediate reward offsets the estimated decrease in the reward-to-go, which is computed by solving a multiple-knapsack model.
-* **Simplified potential-based policy**: similar to the potential-based policy, but the reward-to-go is approximated by single-knapsack models.
+* **Greedy policy**: Accepts dynamic requests in a greedy fashion, and update planned routes either by cheapest insertion or by complete reoptimization.
+* **PFA policy**: Scheduling policy based on policy function approximation.
+* **Rollout policy**: Applies the rollout algorithm with either the Greedy or the PFA policy as the base policy.
+* **Potential-based policy**: Accepts dynamic requests as long as the immediate reward offsets the estimated decrease in the reward-to-go, which is computed by solving multiple-knapsack models.
+* **Simplified potential-based policy**: Similar to the potential-based policy, but the reward-to-go is approximated by single-knapsack models.
 
 In addition, code for the following **offline planners** is also provided:
-* **Myopic planner**: an offline route planner that solves approximately a duration-constrained VRP by a column generation-based heuristic.
-* **Potential-based planner**: an offline route planner that evaluates the expected reward-to-go of planned routes by a single-knapsack model.
+* **Myopic planner**: Offline route planner that solves approximately a duration-constrained VRP by a column generation-based heuristic.
+* **Potential-based planner**: Offline route planner that evaluates the expected reward-to-go of planned routes by a single-knapsack model.
 
 ## Dependencies
 The implementation requires:
