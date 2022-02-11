@@ -56,6 +56,7 @@ The implementation is modular and follows closely the methodology proposed in [1
 `OfflinePlanner.h`: Abstract class (or *interface*) to be implemented by offline planners.
 
 `PotentialPlanner.h`: Potential-based offline planner based on the single-knapsack potential approximation. **Currently the best performing offline planner.**
+
 ---
 
 ### DVRPSR Simulator and Online Scheduling Policies
@@ -84,6 +85,7 @@ The implementation is modular and follows closely the methodology proposed in [1
 `State.h`: Represents a state of the dynamic system, including all vehicle states and the current request.
 
 `mPGreedyPolicy.h`: Potential-based policy (PbP): potential approximation by multiple-knapsack models. **Currently the best-performing online policy.**
+
 ---
 
 ### Reoptimization Models (Branch-and-Cut TSP Algorithm)
@@ -96,6 +98,7 @@ The implementation is modular and follows closely the methodology proposed in [1
 `MinCutSolver.h`: Algorithm for finding the global minimum cut in a flow network.
 
 `RouteReoptimizer.h`: Reoptimizes the requests served along a planned route by solving an open TSP.
+
 ---
 
 ### Other Modules
@@ -114,5 +117,6 @@ The implementation is modular and follows closely the methodology proposed in [1
 `Stopwatch.h`: Implements a simple stopwatch. Credits to [Kyle Kloepper](https://isocpp.org/wiki/faq/wg21#kyle-kloepper).
 
 `TikZExporter.h`: Collection of functions to export a state of the dynamic system to LaTeX/TikZ graphics.
+
 ---
 
