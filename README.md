@@ -11,6 +11,8 @@ For a glimpse of the DVRPSR and some of the scheduling policies implemented, wat
 
 ![DVRPSR Snapshot](snapshot.png?raw=true|width=100)
 
+A presentation summarizing the methodology proposed is available [here](DVRPSR-Presentation.pdf).
+
 More specifically, the code implements the following **scheduling policies** for the DVRPSR:
 * **Greedy policy**: Accepts dynamic requests in a greedy fashion, and update planned routes either by cheapest insertion or by complete reoptimization.
 * **PFA policy**: Scheduling policy based on policy function approximation.
