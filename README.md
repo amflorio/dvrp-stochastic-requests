@@ -9,7 +9,7 @@ This repository contains the source code and datasets to allow the replication o
 
 For a glimpse of the DVRPSR and some of the scheduling policies implemented, watch our project's visual abstract: [https://youtu.be/D57xNfU73as](https://youtu.be/D57xNfU73as)
 
-![DVRPSR Snapshot](snapshot.png?raw=true)
+![DVRPSR Snapshot](snapshot.png?raw=true|width=100)
 
 More specifically, the code implements the following **scheduling policies** for the DVRPSR:
 * **Greedy policy**: Accepts dynamic requests in a greedy fashion, and update planned routes either by cheapest insertion or by complete reoptimization.
