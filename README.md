@@ -120,5 +120,3 @@ The implementation is modular and follows closely the methodology proposed in [1
 
 `TikZExporter.h`: Collection of functions to export a state of the dynamic system to LaTeX/TikZ graphics.
 
----
-
