@@ -1,3 +1,7 @@
+/**
+ * Credits due to Kyle Kloepper
+ * https://isocpp.org/wiki/faq/wg21#kyle-kloepper
+ */
 #include <chrono>
 
 class Stopwatch {
