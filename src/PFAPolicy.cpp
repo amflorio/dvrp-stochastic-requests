@@ -32,11 +32,6 @@ PFAPolicy::PFAPolicy(OfflinePlan pln, int h) : plan{move(pln)}, H{h} {
         cout<<"interval: ["<<a<<", ...)   ;   step size: "<<ss<<endl;
         for (double s=a; true; s+=ss) {
             double totrew=simulateReward(vehics, trjs, s);
-            /*
-            double totrew=0;
-            for (const auto& trj : trjs)
-                totrew+=simulateReward(vehics, trj, s);
-            */
             cout<<"avg. reward gamma="<<s<<": "<<totrew/H<<"  "
                     <<(totrew>best.second?"***":"")<<endl;
             if (totrew>best.second) {
@@ -148,8 +143,6 @@ int PFAPolicy::simulateReward(const vector<PlannedRoute>& routes,
         if (abs(g-c.first)<1e-10)
             return c.second;
     int totrew=0;
-    bool savereopt=reopt;
-    reopt=false;        // temporarily disable reopt, if set
     for (const auto& trj : trjs) {
         auto routescpy=routes;
         for (const auto& req : trj) {
@@ -165,7 +158,6 @@ int PFAPolicy::simulateReward(const vector<PlannedRoute>& routes,
             }
         }
     }
-    reopt=savereopt;    // reenable reopt, if set
     cache.push_back(pair<double, int>(g, totrew));
     return totrew;
 }
