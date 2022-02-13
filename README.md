@@ -103,22 +103,31 @@ route 3: duration: 213.585 requests: 11
 route 4: duration: 263.337 requests: 12
 total duration (5 routes): 1105.39
 request arrived: [1.79696,8567,11.8254]
-decision: [1,1]  (time: 2.036 s)
+decision: [1,1]  (time: 2.06 s)
 accepted requests: 1
+projected total accepted: 134
+request arrived: [3.45278,4348,13.9297]
+decision: [1,3]  (time: 1.98 s)
+accepted requests: 2
+projected total accepted: 134
 [...]
 ```
 After around 4 minutes (depending on the hardware) the simulation finishes and the app outputs summary statistics:
 ```
 [...]
+request arrived: [590.799,1491,9.76659]
+decision: [0,0]  (time: 0.028 s)
+rejected requests: 93
+not exporting .tex files!
 Simulation results:
 static requests: 42
-dynamic requests accepted: 136
-dynamic requests rejected: 92
-dynamic requests acceptance ratio: 0.596491
-total duration of static and accepted dynamic requests: 1734.37
-(min % over total service duration: 0.578125)
-avg decision time: 0.88232 s
-max decision time: 2.072 s
+dynamic requests accepted: 135
+dynamic requests rejected: 93
+dynamic requests acceptance ratio: 0.592105
+total duration of static and accepted dynamic requests: 1715.48
+(min % over total service duration: 0.571825)
+avg decision time: 0.872298 s
+max decision time: 2.067 s
 ```
 Note: the simulation takes considerably longer in larger instances. In the largest instance of the dataset (V-1.5-UTI-20), policy PbP (H=50) takes up to 150 seconds **per request** (depending on hardware). Other policies (e.g., rollout policies with H=25 or higher) are not suitable for very large instances.
 
