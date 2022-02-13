@@ -176,7 +176,7 @@ The implementation is modular and follows closely the methodology proposed in [1
 
 `PFAPolicy.h`: Policy function approximation-based scheduling policy.
 
-`PGreedyPolicy.h`: Simplified potential-based policy (S-PbP): potential approximation via simple knapsack models.
+`PGreedyPolicy.h`: Simplified potential-based policy (S-PbP): potential approximation via simple-knapsack models.
 
 `PlannedRoute.h`: Represents a planned route.
 
@@ -186,7 +186,7 @@ The implementation is modular and follows closely the methodology proposed in [1
 
 `RolloutPolicy.h`: Rollout scheduling policy that can be used with arbitrary base policies.
 
-`SimResults.h`: Stores the results of the simulation.
+`SimResults.h`: Stores simulation results.
 
 `State.h`: Represents a state of the dynamic system, including all vehicle states and the current request.
 
