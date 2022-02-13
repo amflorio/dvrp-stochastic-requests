@@ -71,7 +71,53 @@ where <mode> =
 	33   Simulate: Rollout on PFA, with Reopt (H=100)
 ```
 
-For example, ...
+For example, to simulate the potential-based policy (PbP) on the Vienna network with ~0.4 requests per minute, uniformly distributed and time-invariant (UTI) request distribution and 5 vehicles under the provided trajectory and (potential-based) offline plan:
+```
+$ ./dvrpsr 21 V-0.4-UTI-5-50 ../reqs/V-0.4-UTI.1.req ../offline_plans/V-0.4-UTI-5.pb.op 
+Instance(): code: V-0.4-UTI-5-50
+loading Vienna network ...
+Lambda: 0.4
+space-time distribution: uti (0)
+number of vehicles: 5
+degree of dynamism: 0.5
+length of the service period: 600
+setting up node types based on spatial dist. and clusters ...
+pre-processing shortest-paths ...
+2000/16080 done
+4000/16080 done
+6000/16080 done
+8000/16080 done
+10000/16080 done
+12000/16080 done
+14000/16080 done
+16000/16080 done
+finished pre-processing shortest-paths
+readRequests: read 42 static and 228 dynamic requests
+loading offline plan from ../offline_plans/V-0.4-UTI-5.pb.op ...
+offline plan loaded!
+route 0: duration: 207.14 requests: 6
+route 1: duration: 211.287 requests: 7
+route 2: duration: 210.043 requests: 6
+route 3: duration: 213.585 requests: 11
+route 4: duration: 263.337 requests: 12
+total duration (5 routes): 1105.39
+request arrived: [1.79696,8567,11.8254]
+decision: [1,1]  (time: 2.036 s)
+accepted requests: 1
+```
+After around 4 minutes (depending on the hardware) the simulation finishes and the app outputs summary statistics:
+```
+[...]
+Simulation results:
+static requests: 42
+dynamic requests accepted: 136
+dynamic requests rejected: 92
+dynamic requests acceptance ratio: 0.596491
+total duration of static and accepted dynamic requests: 1734.37
+(min % over total service duration: 0.578125)
+avg decision time: 0.88232 s
+max decision time: 2.072 s
+```
 
 ## Documentation
 The implementation is modular and follows closely the methodology proposed in [1]. Below, we provide a brief description of the contents of each module:
