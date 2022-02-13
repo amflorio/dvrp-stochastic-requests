@@ -104,6 +104,7 @@ total duration (5 routes): 1105.39
 request arrived: [1.79696,8567,11.8254]
 decision: [1,1]  (time: 2.036 s)
 accepted requests: 1
+[...]
 ```
 After around 4 minutes (depending on the hardware) the simulation finishes and the app outputs summary statistics:
 ```
@@ -118,6 +119,7 @@ total duration of static and accepted dynamic requests: 1734.37
 avg decision time: 0.88232 s
 max decision time: 2.072 s
 ```
+Note: the simulation takes considerably longer in larger instances. In the largest instance of the dataset (V-1.5-UTI-20), policy PbP (H=50) takes up to 150 seconds **per request** (depending on hardware). Other policies (e.g., rollout policies with H=25 or higher) are not suitable for very large instances.
 
 ## Documentation
 The implementation is modular and follows closely the methodology proposed in [1]. Below, we provide a brief description of the contents of each module:
