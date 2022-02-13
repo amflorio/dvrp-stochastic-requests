@@ -58,8 +58,11 @@ SimResults PolicySimulator::simulate(const OfflinePlan& plan,
             if (vehics[dec.assign].links.size()==0)     // idle vehicle?
                 vehics[dec.assign].start=req.u;
             vehics[dec.assign].links=dec.routing;
+            // uncomment below to output complete updated route
+            /*
             cout<<"planned route ["<<dec.assign<<"] updated: "
                     <<vehics[dec.assign]<<endl;
+            */
             assert(vehics[dec.assign].feasible());
             accepted.push_back(req);
             cout<<"accepted requests: "<<accepted.size()<<endl;
@@ -78,7 +81,6 @@ SimResults PolicySimulator::simulate(const OfflinePlan& plan,
                 SimResults::avgDecisionTime(dectimes),
                 SimResults::maxDecisionTime(dectimes));
     }
-    //cin.get();
     exp.setTexPolicy(policy->texString());
     //exp.exportAll();
     cout<<"not exporting .tex files!"<<endl;
