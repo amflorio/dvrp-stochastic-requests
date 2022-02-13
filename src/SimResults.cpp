@@ -59,9 +59,12 @@ void SimResults::print() const {
             /(data->instance().vehicles()*data->instance().period())<<")"<<endl;
     cout<<"avg decision time: "<<avgDecisionTime(dectimes)<<" s"<<endl;
     cout<<"max decision time: "<<maxDecisionTime(dectimes)<<" s"<<endl;
+    // uncomment below to output cumulative request acceptance over time
+    /*
     cout<<"cumulative acceptance over time:"<<endl;
     auto vcum=cumulativeAcceptance();
     for (const auto& p : vcum)
         cout<<"cum: "<<p.first<<": "<<p.second<<endl;
+    */
 }
 
