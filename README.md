@@ -30,7 +30,7 @@ The implementation requires:
 * The [CPLEX Optimization Studio](https://www.ibm.com/ca-en/products/ilog-cplex-optimization-studio), which is free for academic use. CPLEX is used **(i)** for solving the multiple-knapsack models, **(ii)** within the column generation procedure for generating offline route plans, and **(iii)** within a branch-and-cut Traveling Salesman Problem (TSP) algorithm for reoptimizing planned routes.
 
 ## Building and Running
-A `Makefile` is provided for reference only. This should be adapted to match the specific host requirements (including `CPLEX` include files and libraries).
+A `Makefile` is provided for reference only. This should be adapted to match the specific host requirements, including `CPLEX` header files and libraries.
 
 The code compiles into a single executable `dvrpsr`. The app allows several command line options:
 
@@ -79,8 +79,7 @@ loading Vienna network ...
 Lambda: 0.4
 space-time distribution: uti (0)
 number of vehicles: 5
-degree of dynamism: 0.5
-length of the service period: 600
+length of the service period: 600 minutes
 setting up node types based on spatial dist. and clusters ...
 pre-processing shortest-paths ...
 2000/16080 done
