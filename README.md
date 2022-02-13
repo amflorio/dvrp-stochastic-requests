@@ -23,7 +23,8 @@ The code implements the following **scheduling policies** for the DVRPSR:
 
 In addition, code for the following **offline planners** is also provided:
 * **Myopic planner**: Offline route planner that solves approximately a duration-constrained VRP by a column generation-based heuristic.
-* **Potential-based planner**: Offline route planner that evaluates the expected reward-to-go of planned routes by single-knapsack models. **Currently the best performing offline planner for the DVRPSR.**
+* **Potential-based planner**: Offline route planner that evaluates the expected reward-to-go of planned routes by single-knapsack models.\
+**Currently the best performing offline planner for the DVRPSR.**
 
 ## Dependencies
 The implementation requires:
