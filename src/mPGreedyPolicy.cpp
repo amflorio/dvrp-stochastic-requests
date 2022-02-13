@@ -67,7 +67,7 @@ vector<tuple<Decision, double>> mPGreedyPolicy::decisionsPotentials(
     double prej;
     decpots.emplace_back(Decision(false, 0, {}),
             prej=PlannedRoute::potential(trjs, s.vehics, s.req.u));
-    cout<<"pot(rej): "<<prej<<endl;
+    //cout<<"pot(rej): "<<prej<<endl;
     for (int k=0; k<s.vehics.size(); ++k)
         if (s.vehics[k].links.size()!=0) {      // vehicle k not idle?
             auto ci=cheapestInsertion(s.vehics[k], s.req);
