@@ -55,8 +55,7 @@ Instance::Instance(string code) : code_{code} {
             cout<<"invalid degree of dynamism"<<endl;
             exit(-1);
         }
-        cout<<"degree of dynamism: "<<degDyn<<endl;
-        cout<<"length of the service period: "<<U<<endl;
+        cout<<"length of the service period: "<<U<<" minutes"<<endl;
         setupClusters();
         setupDepot();
     } catch (...) {
