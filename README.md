@@ -30,6 +30,48 @@ The implementation requires:
 * The [CPLEX Optimization Studio](https://www.ibm.com/ca-en/products/ilog-cplex-optimization-studio), which is free for academic use. CPLEX is used **(i)** for solving the multiple-knapsack models, **(ii)** within the column generation procedure for generating offline route plans, and **(iii)** within a branch-and-cut Traveling Salesman Problem (TSP) algorithm for reoptimizing planned routes.
 
 ## Building and Running
+A `Makefile` is provided for reference only. This should be adapted to match the specific host requirements (including `CPLEX` include files and libraries).
+
+The code compiles into a single executable `dvrpsr`. The app allows several command line options:
+
+```
+$ ./dvrpsr 
+usage: ./dvrpsr <mode> [...]
+where <mode> =
+	 0   Export Network Instance to TeX/TikZ
+	 1   Generate Random Static Requests
+	 2   Generate Random Dynamic Requests
+	 3   Create Myopic Offline Plan
+	 4   Create (simple) Potential-based Offline Plan
+	 5   Simulate: Greedy Policy (GP)
+	 6   Simulate: GP, with Reopt
+	 7   Simulate: Rollout on GP (H=10)
+	 8   Simulate: Rollout on GP (H=25)
+	 9   Simulate: Rollout on GP (H=50)
+	10   Simulate: Rollout on GP (H=100)
+	11   Simulate: Rollout on GP, with Reopt (H=10)
+	12   Simulate: Rollout on GP, with Reopt (H=25)
+	13   Simulate: Rollout on GP, with Reopt (H=50)
+	14   Simulate: Rollout on GP, with Reopt (H=100)
+	18   Create (multiple) Potential-based Offline Plan
+	19   Simulate: Simplified Potential-based Policy (S-PbP, H=50)
+	20   Simulate: S-PbP (H=100)
+	21   Simulate: PbP (H=50)
+	22   Simulate: PbP (H=100)
+	23   Export Offline Plan to TeX/TikZ
+	24   Simulate: PFA (CI)
+	25   Simulate: PFA (Reopt)
+	26   Simulate: Rollout on PFA (H=10)
+	27   Simulate: Rollout on PFA (H=25)
+	28   Simulate: Rollout on PFA (H=50)
+	29   Simulate: Rollout on PFA (H=100)
+	30   Simulate: Rollout on PFA, with Reopt (H=10)
+	31   Simulate: Rollout on PFA, with Reopt (H=25)
+	32   Simulate: Rollout on PFA, with Reopt (H=50)
+	33   Simulate: Rollout on PFA, with Reopt (H=100)
+```
+
+For example, ...
 
 ## Documentation
 The implementation is modular and follows closely the methodology proposed in [1]. Below, we provide a brief description of the contents of each module:
