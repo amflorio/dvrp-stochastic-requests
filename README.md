@@ -17,7 +17,8 @@ The code implements the following **scheduling policies** for the DVRPSR:
 * **Greedy policy**: Accepts dynamic requests in a greedy fashion, and update planned routes either by cheapest insertion or by complete reoptimization.
 * **PFA policy**: Scheduling policy based on policy function approximation.
 * **Rollout policy**: Applies the rollout algorithm with either the Greedy or the PFA policy as the base policy.
-* **Potential-based policy**: Accepts dynamic requests as long as the immediate reward offsets the estimated decrease in the reward-to-go, which is computed by solving multiple-knapsack models. **Currently the best-performing online policy for the DVRPSR.**
+* **Potential-based policy**: Accepts dynamic requests as long as the immediate reward offsets the estimated decrease in the reward-to-go, which is computed by solving multiple-knapsack models.\
+**Currently the best-performing online policy for the DVRPSR.**
 * **Simplified potential-based policy**: Similar to the potential-based policy, but the reward-to-go is approximated by single-knapsack models.
 
 In addition, code for the following **offline planners** is also provided:
