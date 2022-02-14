@@ -65,9 +65,6 @@ void TikZExporter::baseNetwork() {
     */
 }
 
-//, of(filename), buf{of.rdbuf()} {
-    //assert(of.is_open());
-
 void TikZExporter::exportAll() {
     cout<<"TikZExporter: exporting all states to .TeX files (prefix `"<<prefix
             <<"') ..."<<endl;
@@ -79,10 +76,6 @@ void TikZExporter::exportAll() {
     exportNetwork();
     vector<Request> past;
     for (int i=0; i<states.size(); ++i) {
-        /*
-        if (i==100)
-            break;
-        */
         const auto& st=states[i];
         if (get<2>(st)) {
             cout<<get<0>(st)<<": ["<<get<1>(st).vehics.size()<<";"
