@@ -16,13 +16,13 @@ DVRPLabel::DVRPLabel(vector<int> nds, double c, double dls) :
 bool DVRPLabel::dominates(const DVRPLabel& l) const {
     if (cost>l.cost)
         return false;
+    return (ngbin&(~l.ngbin))==0;
     /*
     for (int k=0; k<ngset.size(); ++k)
         if (ngset[k]>l.ngset[k])
             return false;
     return true;
     */
-    return (ngbin&(~l.ngbin))==0;
 }
 
 DVRPLabel DVRPLabel::extend(int i, double c, double dl) const {
@@ -49,20 +49,6 @@ DVRPLabel DVRPLabel::extend(int i, double c, double dl) const {
             }
         }
     }
-    /*
-    for (int i=0; i<ngset.size(); ++i) { 
-        int n=data->ngNode(node, i);
-        if (n==nextnode)
-            ngset[i]=1;
-        else {
-            int idx=data->ngIndex(nextnode, n);
-            if (idx==-1 || next.ngset[idx]==0)
-                ngset[i]=0;
-            else
-                ngset[i]=1;
-        }
-    }
-    */
     return ext;
 }
 
