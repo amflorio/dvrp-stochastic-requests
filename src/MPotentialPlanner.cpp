@@ -70,12 +70,6 @@ OfflinePlan MPotentialPlanner::plan() {
     }
 }
 
-/*
-OfflinePlan MPotentialPlanner::plan() {
-    return {plannedRoutes(solveMaxPotential(reqs.size()))};
-}
-*/
-
 MPotentialPlanner::Solution MPotentialPlanner::solve() {
     if (!cplex.solve()) {
         cout<<"MPotentialPlanner: can't solve model"<<endl;
