@@ -25,48 +25,6 @@ double Dijkstra::cost(int s, int t) {
     return costs[s][t];
 }
 
-/*
-Path Dijkstra::solvest(int s, int t) const {
-    assert(s>=0&&s<data->instance().sizeV()&&t>=0&&t<data->instance().sizeV());
-    if (s==t)
-        return Path(s);
-    vector<Link> pred(data->instance().sizeV(), Link(-1,-1,-1,-1));
-    vector<double> cost(data->instance().sizeV(),
-            numeric_limits<double>::infinity());    // cost=0 => visited
-    typedef pair<double, int> validxp;
-    typedef priority_queue<validxp, vector<validxp>,
-            std::greater<validxp>> mypq;
-    mypq pq;
-    pq.push({0, s});
-    cost[s]=0;
-    while (true) {
-        auto next=pq.top();
-        pq.pop();
-        if (next.second!=s && cost[next.second]==0)
-            continue;
-        if (next.second==t) {
-            // return shortest path
-            vector<Link> links;
-            links.push_back(pred[t]);
-            int prev=pred[t].s;
-            while (prev!=s) {
-                links.push_back(pred[prev]);
-                prev=pred[prev].s;
-            }
-            reverse(begin(links), end(links));
-            return Path(links, cost[t]);
-        }
-        for (const auto& l : data->instance().linksFrom(next.second))
-            if (next.first+l.d<cost[l.t]) {
-                cost[l.t]=next.first+l.d;
-                pred[l.t]=l;
-                pq.push({cost[l.t], l.t});
-            }
-        cost[next.second]=0;        // to indicate that it's done
-    }
-}
-*/
-
 Path Dijkstra::solve(int s, int t) {
     assert(s>=0&&s<data->instance().sizeV()&&t>=0&&t<data->instance().sizeV());
     if (s==t)
