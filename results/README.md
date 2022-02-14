@@ -1,6 +1,6 @@
 ## Complete Results
 
-File `results.csv` contains the results of the 27,964 simulations executed in the computational study. The fields indicate the following:
+File `results.csv` contains the results of the 27,964 simulations conducted in the computational study in [1]. The fields indicate the following:
 
 * **Rate**: Rate of requests in {0.2, 0.4, 0.8, 1.5}.
 * **K**: Number of vehicles in {2, 3, 5, 6, 10, 12, 20}.
