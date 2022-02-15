@@ -6,17 +6,17 @@
 #include "Dijkstra.h"
 #include "GreedyPolicy.h"
 #include "Instance.h"
-#include "mPGreedyPolicy.h"
 #include "MPotentialPlanner.h"
 #include "MyopicPlanner.h"
 #include "Path.h"
+#include "PbP.h"
 #include "PFAPolicy.h"
-#include "PGreedyPolicy.h"
 #include "PolicySimulator.h"
 #include "PotentialPlanner.h"
 #include "Request.h"
 #include "RolloutPolicy.h"
 #include "SimResults.h"
+#include "SPbP.h"
 #include "Stopwatch.h"
 #include "TikZExporter.h"
 
@@ -207,16 +207,16 @@ int main(int argc, char* argv[]) {
             pol=make_shared<RolloutPolicy>(make_shared<GreedyPolicy>(), 100);
             pol->setReoptimize();
         } else if (mode==19) {
-            pol=make_shared<PGreedyPolicy>(50);
+            pol=make_shared<SPbP>(50);
             pol->setReoptimize();
         } else if (mode==20) {
-            pol=make_shared<PGreedyPolicy>(100);
+            pol=make_shared<SPbP>(100);
             pol->setReoptimize();
         } else if (mode==21) {
-            pol=make_shared<mPGreedyPolicy>(50);
+            pol=make_shared<PbP>(50);
             pol->setReoptimize();
         } else if (mode==22) {
-            pol=make_shared<mPGreedyPolicy>(100);
+            pol=make_shared<PbP>(100);
             pol->setReoptimize();
         } else if (mode==24) {
             pol=make_shared<PFAPolicy>(plan, 100);

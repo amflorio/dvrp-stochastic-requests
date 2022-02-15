@@ -1,16 +1,16 @@
-#ifndef MPGREEDYPOLICY_H
-#define MPGREEDYPOLICY_H
+#ifndef PBP_H
+#define PBP_H
 
 #include <vector>
 #include "BasePolicy.h"
 
-class mPGreedyPolicy : public BasePolicy {
+class PbP : public BasePolicy {
     private:
         int Hpot;
         std::vector<std::tuple<Decision, double>> decisionsPotentials(
                 const State& s) const;
     public:
-        mPGreedyPolicy(int hpot) : Hpot{hpot} {}
+        PbP(int hpot) : Hpot{hpot} {}
         Decision decide(const State& s) const override;
         std::vector<Decision> decisions(const State& s) const override;
         std::string texString() const override;

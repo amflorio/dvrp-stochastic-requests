@@ -174,9 +174,9 @@ The implementation is modular and follows closely the methodology proposed in [1
 
 `OnlinePolicy.h`: Abstract class (or *interface*) to be implemented by scheduling policies.
 
-`PFAPolicy.h`: Policy function approximation-based scheduling policy.
+`PbP.h`: Potential-based policy (PbP): potential approximation by multiple-knapsack models. **Currently the best-performing online policy for the DVRPSR.**
 
-`PGreedyPolicy.h`: Simplified potential-based policy (S-PbP): potential approximation via simple-knapsack models.
+`PFAPolicy.h`: Policy function approximation-based scheduling policy.
 
 `PlannedRoute.h`: Represents a planned route.
 
@@ -188,9 +188,9 @@ The implementation is modular and follows closely the methodology proposed in [1
 
 `SimResults.h`: Stores simulation results.
 
-`State.h`: Represents a state of the dynamic system, including all vehicle states and the current request.
+`SPbP.h`: Simplified potential-based policy (S-PbP): potential approximation via simple-knapsack models.
 
-`mPGreedyPolicy.h`: Potential-based policy (PbP): potential approximation by multiple-knapsack models. **Currently the best-performing online policy for the DVRPSR.**
+`State.h`: Represents a state of the dynamic system, including all vehicle states and the current request.
 
 ---
 
