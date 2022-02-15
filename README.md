@@ -161,7 +161,8 @@ The implementation is modular and follows closely the methodology proposed in [1
 
 `OfflinePlanner.h`: Abstract class (or *interface*) to be implemented by offline planners.
 
-`PotentialPlanner.h`: Potential-based offline planner based on the single-knapsack potential approximation. **Currently the best performing offline planner for the DVRPSR.**
+`PotentialPlanner.h`: Potential-based offline planner based on the single-knapsack potential approximation.\
+**Currently the best performing offline planner for the DVRPSR.**
 
 ---
 
@@ -174,7 +175,8 @@ The implementation is modular and follows closely the methodology proposed in [1
 
 `OnlinePolicy.h`: Abstract class (or *interface*) to be implemented by scheduling policies.
 
-`PbP.h`: Potential-based policy (PbP): potential approximation by multiple-knapsack models. **Currently the best-performing online policy for the DVRPSR.**
+`PbP.h`: Potential-based policy (PbP): potential approximation by multiple-knapsack models.\
+**Currently the best-performing online policy for the DVRPSR.**
 
 `PFAPolicy.h`: Policy function approximation-based scheduling policy.
 
