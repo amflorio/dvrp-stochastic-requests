@@ -9,7 +9,7 @@ This repository contains the source code and datasets to allow the replication o
 
 A presentation summarizing the methodology proposed is available [here](DVRPSR-Presentation.pdf).
 
-For a glimpse of the DVRPSR and some of the scheduling policies implemented, watch our project's visual abstract at [https://youtu.be/D57xNfU73as](https://youtu.be/D57xNfU73as).
+For a glimpse of the DVRPSR and some of the scheduling policies implemented, watch our project's visual abstract at [https://youtu.be/D57xNfU73as](https://youtu.be/D57xNfU73as)
 
 ![DVRPSR Snapshot](snapshot.png?raw=true|width=100)
 
