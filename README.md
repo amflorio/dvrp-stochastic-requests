@@ -1,7 +1,7 @@
 # Dynamic Vehicle Routing with Stochastic Requests
 
 ## News
-* **Jul 21, 2022:**  Our paper is now available open-access at [https://www.sciencedirect.com/science/article/pii/S0377221722005677](https://www.sciencedirect.com/science/article/pii/S0377221722005677).
+* **Jul 21, 2022:**  Our paper is now available open-access at [https://www.sciencedirect.com/science/article/pii/S0377221722005677](https://www.sciencedirect.com/science/article/pii/S0377221722005677)
 * **Jul 11, 2022:**  Our manuscript has been accepted for publication in the prestigious **European Journal of Operational Research!**  We thank the editor and the referees for many careful and insightful comments that allowed us to improve the paper substantially.  A link to the paper's online version will be provided as soon as it becomes available.
 * **May 27, 2022:**  We continue our quest to advance the state-of-the-art on online policies for the DVRPSR.  Another expert on dynamic VRPs has joined our team, and we took up the challenge of improving even more the runtimes of the potential-based policy (PbP), while keeping the same performance that distinguishes PbP from general-purpose approximate dynamic programming methods.  More news on that to follow (hopefully) soon!
 
